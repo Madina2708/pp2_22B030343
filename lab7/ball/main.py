@@ -2,7 +2,7 @@ import pygame as pg
 from sys import exit
 
 screen=pg.display.set_mode((490,390))
-pg.display.set_caption("balllzz")
+pg.display.set_caption("balzz")
 clock=pg.time.Clock()
 
 bg=pg.Surface((490,390))

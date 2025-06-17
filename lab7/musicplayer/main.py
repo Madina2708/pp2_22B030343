@@ -7,7 +7,7 @@ from tkinter import filedialog
 
 Playlist=[]
 
-allsongs = os.listdir(r"U:\всё\учеба\2022-2023\pp2\pp2-22B030473-UShyndali\lab7\musicplayer")
+allsongs = sorted(os.listdir(r"/Users/madinayelmuratova/Desktop/tsis 7/tsis7/musicplayer"))
 for song in allsongs:
        if song.endswith(".mp3"):
            Playlist.append(song)
@@ -65,7 +65,7 @@ while True:
                     pg.mixer.music.unpause()
                     ch=1
             if event.key==pg.K_RIGHT:
-                currid=(currid+1)%3
+                currid=(currid+1)%8
                 pg.mixer.music.stop()
                 pg.mixer.music.load(Playlist[currid])
                 pg.mixer.music.play()
@@ -73,7 +73,7 @@ while True:
                 if not ch :
                     pg.mixer.music.pause()
             if event.key==pg.K_LEFT:
-                currid=(currid-1+3)%3
+                currid=(currid-1+8)%8
                 pg.mixer.music.stop()
                 pg.mixer.music.load(Playlist[currid])
                 pg.mixer.music.play()
